@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class ScoreText : MonoBehaviour
 {
     Text textElement;
-    const string prefix = "Score: ";
+    const string suffix = " Cookies";
     void Start()
     {
         textElement = GetComponent<Text>();
@@ -18,7 +18,7 @@ public class ScoreText : MonoBehaviour
 
     public void ScoreAdded()
     {
-        textElement.text = prefix + ScoreController.Score;
+        textElement.text = ScoreController.Score + suffix;
         StartCoroutine(Flash());
     }
 
